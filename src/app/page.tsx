@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <div className="max-w-3xl mx-auto min-h-[calc(100vh-4rem)] flex flex-col justify-center px-4 space-y-3 sm:space-y-4 md:space-y-6 ">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl tracking-tight text-center ">Tolu Stevens</h1>
+            <h1 className="text-5xl sm:text-6xl md:text-8xl tracking-tight text-center ">Tolu Stevens Dev</h1>
 
             <div className="text-lg sm:text-xl md:text-2xl text-[rgb(134,134,134)] h-6 sm:h-7 md:h-8 relative overflow-hidden flex items-center justify-center">
                 <AnimatePresence mode="wait">

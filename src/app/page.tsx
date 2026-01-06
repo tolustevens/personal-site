@@ -22,7 +22,7 @@ export default function Home() {
             3500
         );
         return () => clearInterval(interval);
-    }, []);
+    }, [titles.length]);
 
     return (
         <div className="max-w-3xl mx-auto min-h-[calc(100vh-4rem)] flex flex-col justify-center px-4 space-y-3 sm:space-y-4 md:space-y-6 ">

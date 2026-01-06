@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-[100svh] flex flex-col bg-[rgb(17,17,17)]">
+        <div className="min-h-screen flex flex-col bg-[rgb(17,17,17)]">
           <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 pt-16 md:pt-0">
             {children}
           </main>

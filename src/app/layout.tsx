@@ -1,8 +1,8 @@
+/// @ts-ignore
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import MobileNavbar from "@/components/MobileNavbar";
-import DesktopNavbar from "@/components/DesktopNavbar";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen flex flex-col bg-[rgb(17,17,17)]">
           <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 pt-16 md:pt-0">
+            <Navbar />
             {children}
           </main>
-          <MobileNavbar />
-          <DesktopNavbar />
         </div>
       </body>
     </html>

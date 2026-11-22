@@ -1,35 +1,29 @@
-/// @ts-ignore
-import "./globals.css";
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import type { ReactNode } from "react";
+import Body from "@/components/Body";
+import "./tailwind.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const manrope = localFont({
+  src: [
+    { path: "../assets/fonts/Manrope-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../assets/fonts/Manrope-SemiBold.ttf", weight: "600", style: "normal" },
+  ],
+  display: "swap",
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
-  title: "Tolu Stevens",
-  description: "Tolu Stevens' Personal Website",
+  title: "Tolu Stevens | Software Engineer",
+  description: "I build thoughtful products and reliable systems.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport: Viewport = { colorScheme: "dark" };
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen flex flex-col bg-[rgb(17,17,17)]">
-          <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 pt-16 md:pt-0">
-            <Navbar />
-            {children}
-          </main>
-        </div>
-      </body>
+    <html lang="en" className={manrope.variable}>
+      <Body>{children}</Body>
     </html>
   );
 }

@@ -1,47 +1,74 @@
-"use client";
-
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import ExperienceItem from "@/components/ExperienceItem";
+import Footer from "@/components/Footer";
+import Page from "@/components/Page";
+import Portrait from "@/components/Portrait";
+import { Heading, Text, Title } from "@/components/Typography";
 
 export default function Home() {
-    const titles = [
-        "Software Engineer",
-        "Yogi",
-        "Martial Artist",
-        "Salsa Dancer",
-        "World Traveler",
-        "Writer",
-        "Life Coach",
-    ];
-
-    const [index, setIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(
-            () => setIndex((i) => (i + 1) % titles.length),
-            3500
-        );
-        return () => clearInterval(interval);
-    }, [titles.length]);
-
-    return (
-        <div className="max-w-3xl mx-auto min-h-[calc(100vh-4rem)] flex flex-col justify-center px-4 space-y-3 sm:space-y-4 md:space-y-6">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl tracking-tight text-center ">Tolu Stevens</h1>
-
-            <div className="text-lg sm:text-xl md:text-2xl text-[rgb(134,134,134)] h-6 sm:h-7 md:h-8 relative overflow-hidden flex items-center justify-center">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={titles[index]}
-                        initial={{ opacity: 0, y: 6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -6 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="absolute"
-                    >
-                        {titles[index]}
-                    </motion.div>
-                </AnimatePresence>
-            </div>
+  return (
+    <Page>
+      <header className="flex max-w-2xl flex-col gap-6 sm:flex-row-reverse sm:items-center sm:justify-between sm:gap-8">
+        <Portrait src="/portrait-placeholder.png" alt="Placeholder portrait" />
+        <div className="min-w-0">
+          <Title>Tolu Stevens</Title>
+          <Text variant="role" className="mt-3">
+            Software Engineer
+          </Text>
+          <Text variant="lead" className="mt-6">
+            I build thoughtful products and reliable systems.
+          </Text>
         </div>
-    );
+      </header>
+
+      <div className="mt-16 max-w-2xl space-y-16 sm:mt-20 sm:space-y-20">
+        <section aria-label="About" className="space-y-5">
+          <Text>
+            Hi, I’m Tolu. I’m a software engineer with five years of experience
+            building apps, financial systems and the tools behind them. I enjoy
+            working across the stack, from the interface people use to the APIs
+            and services that make it work.
+          </Text>
+          <Text>
+            Right now, I’m building Insightful, a mobile app for daily insights
+            and reflection. Previously, I worked at Zumo and BC Bitcoin, building
+            financial dashboards, backend services and trading automation.
+          </Text>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <Heading id="experience-heading">Experience</Heading>
+          <div className="mt-8 space-y-12 sm:mt-10 sm:space-y-14">
+            <ExperienceItem
+              date="Jan 2026 — Present"
+              title="Founder & Software Engineer · Insightful"
+              description="Building a React Native mobile app, a Next.js backend and an admin dashboard. Designed typed REST APIs with validation and authentication, and integrated user accounts and subscriptions."
+              tags={[
+                "TypeScript",
+                "React Native",
+                "Next.js",
+                "MongoDB",
+                "Firebase",
+                "RevenueCat",
+              ]}
+            />
+            <ExperienceItem
+              date="Apr 2022 — Dec 2024"
+              title="Software Engineer · Zumo"
+              href="https://zumo.co.uk/"
+              description="Refactored a legacy financial administration system and built its Material UI dashboard. Improved data fetching for large financial datasets with keyset pagination, and worked across Node.js and PHP APIs and services."
+              tags={["React", "Material UI", "Next.js", "Node.js", "PHP"]}
+            />
+            <ExperienceItem
+              date="Oct 2020 — Apr 2022"
+              title="Sole Full Stack Developer · BC Bitcoin"
+              href="https://bcbitcoin.co.uk/"
+              description="Built and deployed an automated trading system that replaced manual processes and handled over £1M in annual transaction volume. Developed internal financial APIs, reporting tools and features across the company website."
+              tags={["PHP", "REST APIs", "Python"]}
+            />
+          </div>
+        </section>
+        <Footer />
+      </div>
+    </Page>
+  );
 }

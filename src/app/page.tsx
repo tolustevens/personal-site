@@ -1,23 +1,19 @@
 import ExperienceItem from "@/components/ExperienceItem";
 import Footer from "@/components/Footer";
 import Page from "@/components/Page";
-import Portrait from "@/components/Portrait";
 import { Heading, Text, Title } from "@/components/Typography";
 
 export default function Home() {
   return (
     <Page>
-      <header className="flex max-w-2xl flex-col gap-6 sm:flex-row-reverse sm:items-center sm:justify-between sm:gap-8">
-        <Portrait src="/portrait-placeholder.png" alt="Placeholder portrait" />
-        <div className="min-w-0">
-          <Title>Tolu Stevens</Title>
-          <Text variant="role" className="mt-3">
-            Software Engineer
-          </Text>
-          <Text variant="lead" className="mt-6">
-            I build thoughtful products and reliable systems.
-          </Text>
-        </div>
+      <header>
+        <Title>Tolu Stevens</Title>
+        <Text variant="role" className="mt-3">
+          Software Engineer
+        </Text>
+        <Text variant="lead" className="mt-6">
+          I build thoughtful products and reliable systems.
+        </Text>
       </header>
 
       <div className="mt-16 max-w-2xl space-y-16 sm:mt-20 sm:space-y-20">

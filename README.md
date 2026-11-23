@@ -1,25 +1,35 @@
-# Tolu Stevens
+# Tolu Stevens — Portfolio
 
-Personal portfolio built with Next.js, React, TypeScript and Tailwind CSS.
+My personal portfolio, bringing together my background, engineering experience and current work.
 
-```sh
-npm install
-npm run dev
-```
+**[Visit tolustevens.com →](https://www.tolustevens.com)**
 
-Theme colours live in `src/lib/theme.ts`; `tailwind.config.ts` exposes them as
-Tailwind utilities. Shared page, typography and legal-page styles live in
-`src/components`. The CSS entry file only loads Tailwind and its configuration.
-Manrope Regular and Semibold are hosted locally in
-`src/assets/fonts`, with their font licence.
+## About
 
-```sh
-npm run lint
-npm run build
-```
+I'm a software engineer with five years of experience building applications, financial systems and developer tools. I enjoy working across the stack, from user interfaces to the APIs and services behind them.
 
-Insightful's privacy policy and account-deletion pages remain available at
-`/insightful/privacy-policy` and `/insightful/account-deletion`.
+I'm currently building **Insightful**, a mobile app for daily insights and reflection. Previously, I worked at **Zumo** and **BC Bitcoin**, developing financial dashboards, backend services and trading automation.
 
-The footer CV link serves `public/tolu-stevens-cv.pdf`. Replace that file to
-update the CV without changing the link.
+## Built with
+
+- Next.js
+- React
+- Node.js
+- TypeScript
+- Tailwind CSS
+
+## The site
+
+A simple, focused home for:
+
+- An introduction to me and my work
+- My experience and the technologies I've used
+- Links to my CV, GitHub and email
+
+I'll continue updating it as I build and share more projects.
+
+## Contact
+
+- **Website:** [tolustevens.com](https://www.tolustevens.com)
+- **GitHub:** [@tolustevens](https://github.com/tolustevens)
+- **Email:** [tolu.stevens@proton.me](mailto:tolu.stevens@proton.me)

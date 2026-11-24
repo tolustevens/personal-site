@@ -59,10 +59,10 @@ export default function Hero() {
   const nameSize = reducedMotion
     ? cssClamp("2.25rem", "5vw", "3.75rem")
     : cssClamp(
-        `${2.75 - 0.5 * progress}rem`,
-        `min(${12 - 7 * progress}vw, 16svh)`,
-        `${10 - 6.25 * progress}rem`,
-      );
+      `${2.75 - 0.5 * progress}rem`,
+      `min(${12 - 7 * progress}vw, 16svh)`,
+      `${10 - 6.25 * progress}rem`,
+    );
   const roleSize = cssClamp(
     "1.25rem",
     `${3 - 0.5 * progress}vw`,
@@ -71,6 +71,7 @@ export default function Hero() {
 
   return (
     <section
+      id="home"
       ref={sectionRef}
       aria-label="Introduction"
       className={

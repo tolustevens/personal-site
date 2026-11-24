@@ -22,7 +22,7 @@ export const viewport: Viewport = { colorScheme: "dark" };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={`${manrope.variable} motion-safe:scroll-smooth`}>
       <Body>{children}</Body>
     </html>
   );

@@ -1,4 +1,4 @@
-import Tag from "@/components/Tag";
+import TagGroup from "@/components/TagGroup";
 import { Heading, Text } from "@/components/Typography";
 
 type ExperienceItemProps = {
@@ -23,13 +23,7 @@ export default function ExperienceItem({
         {title}
       </Heading>
       <Text className="mt-3">{description}</Text>
-      <ul aria-label="Technologies used" className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <li key={tag}>
-            <Tag>{tag}</Tag>
-          </li>
-        ))}
-      </ul>
+      <TagGroup tags={tags} className="mt-4" />
     </>
   );
 

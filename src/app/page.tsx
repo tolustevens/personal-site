@@ -1,20 +1,13 @@
 import ExperienceItem from "@/components/ExperienceItem";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import Page from "@/components/Page";
-import { Heading, Text, Title } from "@/components/Typography";
+import { Heading, Text } from "@/components/Typography";
 
 export default function Home() {
   return (
     <Page>
-      <header>
-        <Title>Tolu Stevens</Title>
-        <Text variant="role" className="mt-3">
-          Software Engineer
-        </Text>
-        <Text variant="lead" className="mt-6">
-          I build thoughtful products and reliable systems.
-        </Text>
-      </header>
+      <Hero />
 
       <div className="mt-16 max-w-2xl space-y-16 sm:mt-20 sm:space-y-20">
         <section aria-label="About" className="space-y-5">

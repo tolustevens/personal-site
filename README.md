@@ -8,14 +8,14 @@ My personal portfolio, bringing together my background, engineering experience a
 
 I'm a software engineer with five years of experience building applications, financial systems and developer tools. I enjoy working across the stack, from user interfaces to the APIs and services behind them.
 
-I'm currently building **Insightful**, a mobile app for daily insights and reflection. Previously, I worked at **Zumo** and **BC Bitcoin**, developing financial dashboards, backend services and trading automation.
+I'm currently working on **Insightful**, a mobile app for daily insights and reflection. Previously, I worked at **Zumo** and **BC Bitcoin**, developing financial dashboards, backend services and trading automation.
 
 ## Built with
 
-- Next.js
-- React
-- Node.js
 - TypeScript
+- Node.js
+- React
+- Next.js
 - Tailwind CSS
 
 ## The site

@@ -77,32 +77,32 @@ export default function Hero() {
       className={
         reducedMotion
           ? undefined
-          : "-mt-16 h-svh pt-[30svh] sm:-mt-24 lg:-mt-32"
+          : "-mt-16 h-svh pt-[18svh] sm:-mt-24 sm:pt-[30svh] lg:-mt-32"
       }
     >
-      <header className={reducedMotion ? undefined : "sticky top-[30svh]"}>
-        <div className="relative w-fit">
-          <Title style={reducedMotion ? undefined : { fontSize: nameSize }}>
-            Tolu Stevens
-          </Title>
+      <header className={reducedMotion ? undefined : "sticky top-[18svh] sm:top-[30svh]"}>
+        <div className="relative flex flex-col items-center sm:block sm:w-fit">
           <div
-            className={`absolute top-1/2 left-full ml-3 -translate-y-1/2 sm:ml-6 ${reducedMotion ? "" : "max-[360px]:top-auto max-[360px]:bottom-full max-[360px]:left-0 max-[360px]:mb-4 max-[360px]:ml-0 max-[360px]:translate-y-0"}`}
+            className="mb-6 sm:absolute sm:top-1/2 sm:left-full sm:mb-0 sm:ml-6 sm:-translate-y-1/2"
             style={{ fontSize: nameSize }}
           >
             <Portrait photos={portraits} />
           </div>
+          <Title style={reducedMotion ? undefined : { fontSize: nameSize }}>
+            Tolu Stevens
+          </Title>
         </div>
         <Text
           variant="role"
-          className="mt-3"
+          className="mt-3 text-center sm:text-left"
           style={reducedMotion ? undefined : { fontSize: roleSize }}
         >
           Software Engineer
         </Text>
-        <Text variant="lead" className="mt-6">
+        <Text variant="lead" className="mx-auto mt-6 text-center sm:mx-0 sm:text-left">
           I build thoughtful products and reliable systems.
         </Text>
-        <TagGroup tags={tags} className="mt-4" />
+        <TagGroup tags={tags} className="mt-4 justify-center sm:justify-start" />
       </header>
     </section>
   );

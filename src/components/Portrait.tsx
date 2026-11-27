@@ -46,7 +46,7 @@ export default function Portrait({ photos, intervalMs = 1000 }: PortraitProps) {
     <div
       role="img"
       aria-label="Portraits of Tolu Stevens"
-      className="relative block size-[1.5em] overflow-hidden rounded-full border border-border bg-surface"
+      className="relative block size-40 sm:size-[1.5em] overflow-hidden rounded-full border border-border bg-surface"
     >
       {photos.map((photo, index) => (
         <Image
@@ -54,7 +54,7 @@ export default function Portrait({ photos, intervalMs = 1000 }: PortraitProps) {
           src={photo.src}
           alt=""
           fill
-          sizes="(min-width: 1024px) 240px, (min-width: 640px) 180px, 96px"
+          sizes="(min-width: 1024px) 240px, (min-width: 640px) 180px, 160px"
           preload={index === 0}
           loading={index === 0 ? undefined : "eager"}
           style={{
